@@ -1,0 +1,83 @@
+
+
+ <% layout('layout/boiler_plate')%>
+
+<style>
+  input[type = text]{
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid teal !important;
+  }
+  input[type = password]{
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid teal !important;
+  }
+  input[type = radio]{
+    background-color: teal !important;
+  }
+</style>
+
+ <body>
+  
+
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;" class="d-flex text-center">
+  <form action="/register" method="POST" style=" padding: 4%; border-radius: 10px; height: fit-content; background: transparent" autocomplete="off">
+    <h2>Register Staff</h2>
+    <br>
+    <div class="form-group row">
+      <label for="name" class="col-sm-3 col-form-label">Name</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+      </div>
+    </div>
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-3 pt-0">Type</legend>
+        <div class="col-sm-8" style="text-align: left; margin-left: 2%;">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="user_type" id="manager" value="Manager" checked>
+            <label class="form-check-label" for="manager">
+              Manager
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="user_type" id="clerk" value="Clerk">
+            <label class="form-check-label" for="clerk">
+              Sales Clerk
+            </label>
+          </div>
+        
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="form-group row">
+      <label for="username" class="col-sm-3 col-form-label">Username</label>
+      <div class="col-sm-9">
+        <label class="sr-only" for="username">Username</label>
+      <div class="input-group mb-2">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+      </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="password" class="col-sm-3 col-form-label">Password</label>
+      <div class="col-sm-9">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+      </div>
+    </div>
+    <br>
+    <div class="form-group row">
+      <div class="col-sm-10" style="margin-left: 8%;">
+        <button type="submit" class="btn btn-success" style="background-color: teal;border: none;">Register</button>
+      </div>
+    </div>
+    
+    
+  </form>
+</div>
+
+
+</body>
